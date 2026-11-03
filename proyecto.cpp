@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 
-
+// Se documentan las reglas del juego.
 void mostrar_reglas(){
     cout<<R"reglas(Reglas del juego UNO.
 Objetivo:
@@ -15,7 +15,7 @@ Se pueden jugar varias rondas, y el ganador definitivo es el jugador que gane ma
 Jugadores: De 2 a 4 jugadores.
 
 Las cartas: 108 en total
-Cartas de numero: cuatro colores (azul, verde, rojo y amarillo). Cada color tiene un 0 y dos cartas de cada número del 1 al 9.
+Cartas de numero: cuatro colores (azul, verde, rojo y amarillo). Cada color tiene un 0 y dos cartas de cada numero del 1 al 9.
 Cartas de accion: cada color tiene 2 Salta, 2 Reversa y 2 Roba +2.
 Cartas comodin: 4 Comodin y 4 Roba +4.
 
@@ -24,7 +24,7 @@ Se barajan las cartas y se reparten 7 a cada jugador.
 Las cartas que sobran forman el mazo para robar, boca abajo.
 Se pone una carta boca arriba para iniciar la pila de descarte. Esa es la carta activa.
 
-Cómo se juega:
+Como se juega:
 Los jugadores juegan por turnos, uno despues del otro.
 En tu turno debes jugar una carta que coincida con la carta activa en color, numero o simbolo. 
 Tambien puedes jugar un comodin en cualquier momento.
@@ -45,7 +45,7 @@ Se pueden jugar tantas rondas como quieran.
 Cuando termina el juego, gana quien tenga mas rondas ganadas.)reglas"<<endl<<endl;
 }
 
-
+// Funcion menu principal devuelve la opcion elegida por el usuario.
 int menu (){
     int respuesta;
     cout<<"Bienvenido al juego UNO"<< endl;
@@ -59,13 +59,15 @@ int menu (){
 
 }
 
-
+// Definicion de la estructura con la informacion de cada carta
 struct carta{
     int numero;
     string color;
     string tipo;
     bool estatus;
 };
+
+// Matriz con todas las cartas que conforman el juego, cada carta inicia disponible para jugar.
 
 carta mazo[5][25]={
  {{0, "azul","normal", true}, {1, "azul","normal",true},{2, "azul","normal",true}, {3, "azul","normal",true},{4, "azul","normal",true}, {5, "azul","normal",true}, {6, "azul","normal",true}, {7, "azul","normal",true}, {8, "azul","normal",true},
@@ -94,17 +96,20 @@ int main(){
     int opcion;
     do{
 
+        // Se llama la funcion menu 
         opcion = menu();
 
+        // Se elige la opcion jugar
         if (opcion == 1){
             /* code */
         }
         
-
+        // Se elige la opcion salir
         if(opcion == 2){
             break;
         }
 
+        // Se elige la opcion reglas del juego
         if(opcion==3){
             mostrar_reglas();
         }
