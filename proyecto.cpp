@@ -60,37 +60,52 @@ struct carta{
     int numero;
     string color;
     string tipo;
+    bool estatus;
 };
 
 carta mazo[5][25]={
- {{0, "azul","normal"}, {1, "azul","normal"},{2, "azul","normal"}, {3, "azul","normal"},{4, "azul","normal"}, {5, "azul","normal"}, {6, "azul","normal"}, {7, "azul","normal"}, {8, "azul","normal"},
- {9, "azul","normal"}, {1, "azul","normal"},{2, "azul","normal"}, {3, "azul","normal"},{4, "azul","normal"}, {5, "azul","normal"}, {6, "azul","normal"}, {7, "azul","normal"}, {8, "azul","normal"},{9, "azul","normal"},
-  {10, "azul","+2"}, {10, "azul","+2"},{10, "azul","salta"}, {10, "azul","reversa"},{10, "azul","salta"}, {10, "azul","reversa"}},
+ {{0, "azul","normal", true}, {1, "azul","normal",true},{2, "azul","normal",true}, {3, "azul","normal",true},{4, "azul","normal",true}, {5, "azul","normal",true}, {6, "azul","normal",true}, {7, "azul","normal",true}, {8, "azul","normal",true},
+ {9, "azul","normal",true}, {1, "azul","normal",true},{2, "azul","normal",true}, {3, "azul","normal",true},{4, "azul","normal",true}, {5, "azul","normal",true}, {6, "azul","normal",true}, {7, "azul","normal",true}, {8, "azul","normal",true},{9, "azul","normal",true},
+  {10, "azul","+2",true}, {10, "azul","+2",true},{10, "azul","salta",true}, {10, "azul","reversa",true},{10, "azul","salta",true}, {10, "azul","reversa",true}},
 
- {{0, "rojo","normal"}, {1, "rojo","normal"},{2, "rojo","normal"}, {3, "rojo","normal"},{4, "rojo","normal"}, {5, "rojo","normal"}, {6, "rojo","normal"}, {7, "rojo","normal"}, {8, "rojo","normal"},
- {9, "rojo","normal"}, {1, "rojo","normal"},{2, "rojo","normal"}, {3, "rojo","normal"},{4, "rojo","normal"}, {5, "rojo","normal"}, {6, "rojo","normal"}, {7, "rojo","normal"}, {8, "rojo","normal"},{9, "rojo","normal"},
-  {10, "rojo","+2"}, {10, "rojo","+2"},{10, "rojo","salta"}, {10, "rojo","reversa"},{10, "rojo","salta"}, {10, "rojo","reversa"}},
+ {{0, "rojo","normal",true}, {1, "rojo","normal",true},{2, "rojo","normal",true}, {3, "rojo","normal",true},{4, "rojo","normal",true}, {5, "rojo","normal",true}, {6, "rojo","normal",true}, {7, "rojo","normal",true}, {8, "rojo","normal",true},
+ {9, "rojo","normal",true}, {1, "rojo","normal",true},{2, "rojo","normal",true}, {3, "rojo","normal",true},{4, "rojo","normal",true}, {5, "rojo","normal",true}, {6, "rojo","normal",true}, {7, "rojo","normal",true}, {8, "rojo","normal",true},{9, "rojo","normal",true},
+  {10, "rojo","+2",true}, {10, "rojo","+2",true},{10, "rojo","salta",true}, {10, "rojo","reversa",true},{10, "rojo","salta",true}, {10, "rojo","reversa",true}},
 
- {{0, "verde","normal"}, {1, "verde","normal"},{2, "verde","normal"}, {3, "verde","normal"},{4, "verde","normal"}, {5, "verde","normal"}, {6, "verde","normal"}, {7, "verde","normal"}, {8, "verde","normal"},
- {9, "verde","normal"}, {1, "verde","normal"},{2, "verde","normal"}, {3, "verde","normal"},{4, "verde","normal"}, {5, "verde","normal"}, {6, "verde","normal"}, {7, "verde","normal"}, {8, "verde","normal"},{9, "verde","normal"},
-  {10, "verde","+2"}, {10, "verde","+2"},{10, "verde","salta"}, {10, "verde","reversa"},{10, "verde","salta"}, {10, "verde","reversa"}},
+ {{0, "verde","normal",true}, {1, "verde","normal",true},{2, "verde","normal",true}, {3, "verde","normal",true},{4, "verde","normal",true}, {5, "verde","normal",true}, {6, "verde","normal",true}, {7, "verde","normal",true}, {8, "verde","normal",true},
+ {9, "verde","normal",true}, {1, "verde","normal",true},{2, "verde","normal",true}, {3, "verde","normal",true},{4, "verde","normal",true}, {5, "verde","normal",true}, {6, "verde","normal",true}, {7, "verde","normal",true}, {8, "verde","normal",true},{9, "verde","normal",true},
+  {10, "verde","+2",true}, {10, "verde","+2",true},{10, "verde","salta",true}, {10, "verde","reversa",true},{10, "verde","salta",true}, {10, "verde","reversa",true}},
 
- {{0, "amarillo","normal"}, {1, "amarillo","normal"},{2, "amarillo","normal"}, {3, "amarillo","normal"},{4, "amarillo","normal"}, {5, "amarillo","normal"}, {6, "amarillo","normal"}, {7, "amarillo","normal"}, {8, "amarillo","normal"},
- {9, "amarillo","normal"}, {1, "amarillo","normal"},{2, "amarillo","normal"}, {3, "amarillo","normal"},{4, "amarillo","normal"}, {5, "amarillo","normal"}, {6, "amarillo","normal"}, {7, "amarillo","normal"}, {8, "amarillo","normal"},{9, "amarillo","normal"},
-  {10, "amarillo","+2"}, {10, "amarillo","+2"},{10, "amarillo","salta"}, {10, "amarillo","reversa"},{10, "amarillo","salta"}, {10, "amarillo","reversa"}},
+ {{0, "amarillo","normal",true}, {1, "amarillo","normal",true},{2, "amarillo","normal",true}, {3, "amarillo","normal",true},{4, "amarillo","normal",true}, {5, "amarillo","normal",true}, {6, "amarillo","normal",true}, {7, "amarillo","normal",true}, {8, "amarillo","normal",true},
+ {9, "amarillo","normal",true}, {1, "amarillo","normal",true},{2, "amarillo","normal",true}, {3, "amarillo","normal",true},{4, "amarillo","normal",true}, {5, "amarillo","normal",true}, {6, "amarillo","normal",true}, {7, "amarillo","normal",true}, {8, "amarillo","normal",true},{9, "amarillo","normal",true},
+  {10, "amarillo","+2",true}, {10, "amarillo","+2",true},{10, "amarillo","salta",true}, {10, "amarillo","reversa",true},{10, "amarillo","salta",true}, {10, "amarillo","reversa",true}},
 
- {{11, "negro", "+4"},{11, "negro", "+4"},{11, "negro", "+4"},{11, "negro", "+4"}, {11, "negro", "cambio color"},{11, "negro", "cambio color"},{11, "negro", "cambio color"},{11, "negro", "cambio color"}}
+ {{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true}, {11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true}}
 };
+
 
 
 int main(){
 
     int opcion;
     do{
+
         opcion = menu();
+
+        if (opcion == 1){
+            /* code */
+        }
+        
+
+        if(opcion == 2){
+            break;
+        }
+
         if(opcion==3){
             mostrar_reglas();
         }
+
+
     }while(opcion != 2);
 
 return 0;
