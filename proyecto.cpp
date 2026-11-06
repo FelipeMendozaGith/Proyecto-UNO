@@ -1,6 +1,8 @@
 #include<iostream>
 #include<cctype>
 #include<string>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 // Se documentan las reglas del juego.
@@ -89,7 +91,38 @@ carta mazo[5][25]={
  {{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true}, {11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true}}
 };
 
+struct registro{
 
+    string nombre;
+    int victorias = 0;
+
+};
+
+carta jugadores[4][100]={};
+void repartir_cartas(carta mazo[5][25], int njugadores){
+    for(int i=0; i<njugadores; i++){
+        for(int o=0; o<7; o++){
+            
+                 int fila = rand() % 5;
+                    int col = rand() % 25;
+                    jugadores[i][o]=mazo[fila][col];
+            
+        }
+    }
+
+   
+}
+
+void mostrar_barajas(carta jugadores[4][100]){
+
+    for(int i =0; i<4; i++){
+        for(int z=0;z<100;z++){
+            cout<<jugadores[i][z].numero;
+            cout<<jugadores[i][z].color;
+        }
+    }
+
+};
 
 int main(){
 
@@ -101,7 +134,27 @@ int main(){
 
         // Se elige la opcion jugar
         if (opcion == 1){
-            /* code */
+
+            int njugadores;
+
+            do{
+                
+                cout<<"¿cuantos jugadores quieren jugar?  "<<endl;
+                cin>> njugadores;
+
+            }while(njugadores<2 || njugadores>4 );
+
+            registro usuarios [njugadores];
+
+            for(int i=0; i<njugadores; i++){
+
+                cout<<"ingrese nombre del jugador   "<< i+1 <<endl;
+                cin>> usuarios[i].nombre;
+
+            }
+            repartir_cartas(mazo, njugadores);
+             mostrar_barajas(jugadores);
+            
         }
         
         // Se elige la opcion salir
