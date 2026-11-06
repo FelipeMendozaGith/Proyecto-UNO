@@ -104,9 +104,13 @@ void repartir_cartas(carta mazo[5][25], int njugadores){
         for(int o=0; o<7; o++){
             
                 int fila = rand() % 5;
-                int col = rand() % 25;
-                jugadores[i][o]=mazo[fila][col];
-            
+                if(fila == 5){
+                    int col = rand() % 8;
+                    jugadores[i][o]=mazo[fila][col];
+                }else{
+                    int col = rand() % 25;
+                    jugadores[i][o]=mazo[fila][col];
+                }
         }
     }
 
@@ -115,10 +119,10 @@ void repartir_cartas(carta mazo[5][25], int njugadores){
 
 void mostrar_barajas(carta jugadores[4][100]){
 
-    for(int i =0; i<4; i++){
-        for(int z=0;z<100;z++){
+    for(int i =0; i<2; i++){
+        for(int z=0;z<7;z++){
             cout<<jugadores[i][z].numero;
-            cout<<jugadores[i][z].color;
+            cout<<jugadores[i][z].color<<" ";
         }
     }
 
