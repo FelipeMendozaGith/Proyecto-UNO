@@ -88,7 +88,7 @@ carta mazo[5][25]={
  {9, "amarillo","normal",true}, {1, "amarillo","normal",true},{2, "amarillo","normal",true}, {3, "amarillo","normal",true},{4, "amarillo","normal",true}, {5, "amarillo","normal",true}, {6, "amarillo","normal",true}, {7, "amarillo","normal",true}, {8, "amarillo","normal",true},{9, "amarillo","normal",true},
   {10, "amarillo","+2",true}, {10, "amarillo","+2",true},{10, "amarillo","salta",true}, {10, "amarillo","reversa",true},{10, "amarillo","salta",true}, {10, "amarillo","reversa",true}},
 
- {{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true},{11, "negro", "+4",true}, {11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true},{11, "negro", "cambio color",true}}
+ {{11, "+ 4", "+4",true},{11, "+4", "+4",true},{11, "+4", "+4",true},{11, "+4", "+4",true}, {11, "cambio color", "cambio color",true},{11, "cambio color", "cambio color",true},{11, "cambio color", "cambio color",true},{11, "cambio color", "cambio color",true}}
 };
 
 struct registro{
@@ -104,12 +104,15 @@ void repartir_cartas(carta mazo[5][25], int njugadores){
         for(int o=0; o<7; o++){
             
                 int fila = rand() % 5;
-                if(fila == 5){
+                if(fila == 4){
                     int col = rand() % 8;
                     jugadores[i][o]=mazo[fila][col];
+                    
+
                 }else{
                     int col = rand() % 25;
                     jugadores[i][o]=mazo[fila][col];
+                    
                 }
         }
     }
@@ -121,14 +124,16 @@ void mostrar_barajas(carta jugadores[4][100]){
 
     for(int i =0; i<2; i++){
         for(int z=0;z<7;z++){
-            cout<<jugadores[i][z].numero;
-            cout<<jugadores[i][z].color<<" ";
+            cout<<jugadores[i][z].numero<<" ";
+            cout<<jugadores[i][z].color<<", ";
         }
+        cout<<endl;
     }
 
 };
 
 int main(){
+    std::srand(std::time(nullptr));
     int njugadores;
     int opcion;
     do{
