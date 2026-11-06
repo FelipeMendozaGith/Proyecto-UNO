@@ -103,9 +103,9 @@ void repartir_cartas(carta mazo[5][25], int njugadores){
     for(int i=0; i<njugadores; i++){
         for(int o=0; o<7; o++){
             
-                 int fila = rand() % 5;
-                    int col = rand() % 25;
-                    jugadores[i][o]=mazo[fila][col];
+                int fila = rand() % 5;
+                int col = rand() % 25;
+                jugadores[i][o]=mazo[fila][col];
             
         }
     }
@@ -125,7 +125,7 @@ void mostrar_barajas(carta jugadores[4][100]){
 };
 
 int main(){
-
+    int njugadores;
     int opcion;
     do{
 
@@ -134,9 +134,7 @@ int main(){
 
         // Se elige la opcion jugar
         if (opcion == 1){
-
-            int njugadores;
-
+  
             do{
                 
                 cout<<"¿cuantos jugadores quieren jugar?  "<<endl;
