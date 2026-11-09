@@ -120,17 +120,20 @@ void repartir_cartas(carta mazo[5][25], int njugadores){
    
 }
 
-void mostrar_barajas(carta jugadores[4][100]){
+char menu(carta jugadores[4][100], int j){
 
-    for(int i =0; i<2; i++){
         for(int z=0;z<7;z++){
-            cout<<jugadores[i][z].numero<<" ";
-            cout<<jugadores[i][z].color<<", ";
+            cout<<jugadores[j][z].numero<<" ";
+            cout<<jugadores[j][z].color<<", ";
         }
-        cout<<endl;
-    }
+        char opj;
+        cout<<"r. robar"<<"u.gritar uno"<< endl;
+        cin>> opj;
 
-};
+        return opj;
+
+
+    };
 
 int main(){
     std::srand(std::time(nullptr));
@@ -160,7 +163,14 @@ int main(){
 
             }
             repartir_cartas(mazo, njugadores);
-             mostrar_barajas(jugadores);
+
+            int avance=1;
+            bool ganador=false;
+
+            do{
+
+            }while(ganador=false);
+           
             
         }
         
